@@ -47,13 +47,13 @@ type cortexClient struct {
 
 var httpClient = &cortexClient{
 	Client: &http.Client{
-		Timeout: time.Second * 300,
+		Timeout: time.Second * 600,
 	},
 }
 
 var httpsNoVerifyClient = &cortexClient{
 	Client: &http.Client{
-		Timeout: time.Second * 20,
+		Timeout: time.Second * 600,
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 		},
