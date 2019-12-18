@@ -31,9 +31,9 @@ function main() {
   rm -rf $cortex_sh_tmp_dir && mkdir -p $cortex_sh_tmp_dir
 
   if command -v curl >/dev/null; then
-    curl -s -o $cortex_sh_tmp_dir/cortex https://s3-us-west-2.amazonaws.com/get-cortex/$CORTEX_VERSION_BRANCH_STABLE/cli/$parsed_os/cortex
+    curl -s -o $cortex_sh_tmp_dir/cortex https://s3-us-west-2.amazonaws.com/get-cortex-dev/$CORTEX_VERSION_BRANCH_STABLE/cli/$parsed_os/cortex
   elif command -v wget >/dev/null; then
-    wget -q -O $cortex_sh_tmp_dir/cortex https://s3-us-west-2.amazonaws.com/get-cortex/$CORTEX_VERSION_BRANCH_STABLE/cli/$parsed_os/cortex
+    wget -q -O $cortex_sh_tmp_dir/cortex https://s3-us-west-2.amazonaws.com/get-cortex-dev/$CORTEX_VERSION_BRANCH_STABLE/cli/$parsed_os/cortex
   else
     echo "error: please install \`curl\` or \`wget\`"
     exit 1
